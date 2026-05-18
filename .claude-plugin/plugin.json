@@ -1,0 +1,35 @@
+{
+  "name": "paramify-plugin",
+  "version": "1.0.0",
+  "description": "Connect Claude Code to your Paramify workspace via MCP.",
+  "homepage": "https://paramify.com",
+  "repository": "https://github.com/paramify/paramify-plugin",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Paramify"
+  },
+  "userConfig": {
+    "server_url": {
+      "type": "string",
+      "title": "Paramify MCP server URL",
+      "description": "URL of your Paramify instance. Found under Workspace Settings > Licensing > MCP.",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "title": "API key",
+      "description": "Your Paramify API key. Found under Workspace Settings > API Keys.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "paramify": {
+      "type": "http",
+      "url": "${user_config.server_url}",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}"
+      }
+    }
+  }
+}

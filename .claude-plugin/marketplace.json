@@ -1,0 +1,24 @@
+{
+  "name": "paramify",
+  "description": "Official Paramify plugins for Claude Code.",
+  "owner": {
+    "name": "Paramify"
+  },
+  "plugins": [
+    {
+      "name": "paramify-plugin",
+      "source": "./",
+      "description": "Connect Claude Code to your Paramify workspace via MCP.",
+      "category": "productivity",
+      "keywords": [
+        "paramify",
+        "compliance",
+        "mcp",
+        "fedramp",
+        "security",
+        "cmmc",
+        "risk management"
+      ]
+    }
+  ]
+}
